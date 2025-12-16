@@ -66,7 +66,7 @@ export function CharacterList({
                   </div>
 
                   <div className="flex items-center gap-1">
-                    <Zap className="w-4 h-4 text-purple-400" />
+                    <Zap className={`w-4 h-4 ${getStat(character.energy)}`} />
                     <span className={`text-sm font-semibold ${getStat(character.energy)}`}>
                       {character.energy}
                     </span>
