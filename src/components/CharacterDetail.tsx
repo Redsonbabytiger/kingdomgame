@@ -171,11 +171,11 @@ export function CharacterDetail({
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Zap className="w-5 h-5 text-purple-400" />
-              <span className="text-white font-semibold">Experience</span>
+              <span className="text-white font-semibold">Energy</span>
             </div>
-            <span className="text-lg font-bold text-purple-400">{character.experience}</span>
+            <span className="text-lg font-bold text-purple-400">{character.energy}</span>
           </div>
-          <p className="text-slate-400 text-xs mt-1">Gained from working in jobs</p>
+          <p className="text-slate-400 text-xs mt-1">Helps with working longer</p>
         </div>
       </div>
 
