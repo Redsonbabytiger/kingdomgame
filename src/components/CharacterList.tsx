@@ -1,5 +1,5 @@
 import { Character, Job } from '../types/database';
-import { biceps-flexed, Heart, Zap, Brain, Users, Eye } from 'lucide-react';
+import { bicepsFlexed, Heart, Zap, Brain, Users, Eye } from 'lucide-react';
 
 interface CharacterListProps {
   characters: Character[];
