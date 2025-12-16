@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Character, Job } from '../types/database';
 import { assignJob, removeJob, deleteCharacter } from '../services/characterService';
-import { Heart, Brain, Users, Zap, Trash2, X } from 'lucide-react';
+import { Heart, Eye, Brain, Users, Zap, Trash2, X } from 'lucide-react';
 
 interface CharacterDetailProps {
   character: Character;
@@ -103,14 +103,14 @@ export function CharacterDetail({
           <p className="text-xl font-bold text-white">{character.age}</p>
         </div>
         <div>
-          <p className="text-slate-400 text-sm mb-1">Loyalty</p>
+          <p className="text-slate-400 text-sm mb-1">Health</p>
           <div className="w-full bg-slate-600 rounded-full h-2">
             <div
               className="bg-amber-500 h-2 rounded-full"
-              style={{ width: `${character.loyalty}%` }}
+              style={{ width: `${character.health}%` }}
             ></div>
           </div>
-          <p className="text-white text-sm mt-1">{character.loyalty}%</p>
+          <p className="text-white text-sm mt-1">{character.health}%</p>
         </div>
       </div>
 
@@ -125,7 +125,20 @@ export function CharacterDetail({
               {character.strength}
             </span>
           </div>
-          <p className="text-slate-400 text-xs mt-1">Min required for military roles</p>
+          <p className="text-slate-400 text-xs mt-1">Increases damage dealt and working efficiency</p>
+        </div>
+
+        <div className={`p-4 rounded-lg border border-slate-600 ${getStatColor(character.perception)}`}>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Eye className={`w-5 h-5 ${getStat(character.perception)}`} />
+              <span className="text-white font-semibold">Perception</span>
+            </div>
+            <span className={`text-lg font-bold ${getStat(character.perception)}`}>
+              {character.perception}
+            </span>
+          </div>
+          <p className="text-slate-400 text-xs mt-1">Helps with staying alive</p>
         </div>
 
         <div className={`p-4 rounded-lg border border-slate-600 ${getStatColor(character.intelligence)}`}>
