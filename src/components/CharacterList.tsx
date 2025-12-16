@@ -59,7 +59,7 @@ export function CharacterList({
                   </div>
                   
                   <div className="flex items-center gap-1">
-                    <Users className={`w-4 h-4 ${getStat(character.perception)}`} />
+                    <Eye className={`w-4 h-4 ${getStat(character.perception)}`} />
                     <span className={`text-sm font-semibold ${getStat(character.perception)}`}>
                       {character.perception}
                     </span>
