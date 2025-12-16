@@ -141,10 +141,10 @@ export function CharacterDetail({
           <p className="text-slate-400 text-xs mt-1">Helps with staying alive</p>
         </div>
 
-        <div className="p-4 rounded-lg border border-slate-600 bg-purple-500/20">
+        <div className={`p-4 rounded-lg border border-slate-600 ${getStatColor(character.energy)}`}>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Zap className="w-5 h-5 text-purple-400" />
+              <Zap className={`w-5 h-5 ${getStat(character.perception)}`} />
               <span className="text-white font-semibold">Energy</span>
             </div>
             <span className="text-lg font-bold text-purple-400">{character.energy}</span>
@@ -188,7 +188,7 @@ export function CharacterDetail({
               {character.agility}
             </span>
           </div>
-          <p className="text-slate-400 text-xs mt-1">Important for trade and diplomacy</p>
+          <p className="text-slate-400 text-xs mt-1">Protects from being hit</p>
         </div>
 
         <div className={`p-4 rounded-lg border border-slate-600 ${getStatColor(character.luck)}`}>
