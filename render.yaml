@@ -2,11 +2,11 @@ services:
   - type: web
     runtime: static
     name: sirleroy-kingdom
-    buildCommand: npm install && npm run build
+    buildCommand: npm install && npx update-browserslist-db@latest && npm run build
     staticPublishPath: dist
     envVars:
       - key: VITE_SUPABASE_URL
         value: https://qidaqtlkziogbjfxalvm.supabase.co
         
-      - key: VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY
+      - key: VITE_SUPABASE_ANON_KEY
         value: sb_publishable_s4azmiksBZTAXEJsNeWB6w_Zpgtt8QF
