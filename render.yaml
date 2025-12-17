@@ -1,7 +1,7 @@
 services:
   - type: web
     runtime: static
-    name: kisa-kingdom
+    name: sirleroy-kingdom
     buildCommand: npm install && npm run build
     staticPublishPath: dist
     envVars:
