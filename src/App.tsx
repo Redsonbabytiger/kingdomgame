@@ -6,7 +6,7 @@ import { ResetPasswordPage } from './pages/ResetPasswordPage';
 import { GameSetupPage } from './pages/GameSetupPage';
 import { DashboardPage } from './pages/DashboardPage';
 import { getCivilization } from './services/civilizationService';
-import { supabase } from '../lib/supabase';
+import { supabase } from './lib/supabase';
 
 type AppState =
   | 'login'
